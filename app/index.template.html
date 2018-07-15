@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contacts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.9/angular-material.min.css">
+    <link rel="stylesheet" href="./assets/app.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <base href="/">
+</head>
+<body ng-style="{'max-width': '1200px', 'margin': 'auto'}" ng-app="contactApp" layout="column">
+
+<md-toolbar layout="row" ng-click="">
+    <div class="md-toolbar-tools">
+        <md-button class="menu">
+            <md-icon class="material-icons">menu</md-icon>
+        </md-button>
+        <h3 flex md-truncate>Contact App</h3>
+        <md-button href="/" class="md-hue-3" aria-label="Contacts">
+            Contacts
+        </md-button>
+        <md-button href="messages" class="md-hue-3" aria-label="Messages">
+            Messages
+        </md-button>
+    </div>
+</md-toolbar>
+<div layout="row" flex>
+    <md-sidenav flex md-is-locked-open="$mdMedia('gt-xs')" class="md-whiteframe-2dp" md-component-id="contacts" contact-list>
+    </md-sidenav>
+    <md-content flex layout="column" id="ngview-content" class="md-padding" ng-view>
+    </md-content>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+<md-button class="md-raised md-primary" ng-href="contact">Add New</md-button>
+
+<md-list>
+    <md-list-item ng-repeat="con in contacts">
+        <md-button class="contact" layout="row" ng-href="contact/{{$index}}">
+            <md-icon flex="20" ng-style="{'font-size': '58px', 'height': '58px'}" class="material-icons">
+                account_circle
+            </md-icon>
+            <span flex>{{con.first_name}} {{con.last_name}}</span>
+        </md-button>
+    </md-list-item>
+</md-list>

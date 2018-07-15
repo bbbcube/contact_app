@@ -1,0 +1,41 @@
+[ng-cloak] {
+    display: none;
+}
+
+body {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/*Sidenav area*/
+
+md-list .md-button {
+    color: inherit;
+    font-weight: 500;
+    text-align: left;
+    width: 100%;
+}
+
+md-list .md-button.selected {
+    color: #03a9f4;
+}
+
+md-sidenav md-list {
+    padding: 0px 0px 8px 0px;
+}
+
+/*Contact list*/
+
+.md-button.contact {
+    text-transform: none;
+}
+
+/*Contact details*/
+
+.contact-info h2 {
+    font-weight: 300;
+    margin-bottom: -8px
+}
+
+.contact-info h3 {
+    font-weight: 300;
+}

@@ -1,0 +1,26 @@
+<md-dialog flex="60" aria-label="Basic profile details">
+    <form name="messageForm" novalidate ng-cloak>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Message</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel(messageForm.$dirty)">
+                    <md-icon class="material-icons" aria-label="Close dialog">close</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                <label>Message</label>
+                <md-input-container class="md-block">
+                    <input type="text" name="message" aria-label="Message Body" ng-model="message" required>
+                    <div ng-messages="messageForm.message.$error">
+                        <div ng-message="required">This is required!</div>
+                    </div>
+                </md-input-container>
+                <md-button class="md-raised md-primary" ng-disabled="messageForm.$invalid" ng-click="sendMessage()">
+                        Send
+                </md-button>
+            </div>
+        </md-dialog-content>

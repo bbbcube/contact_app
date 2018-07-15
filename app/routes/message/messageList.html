@@ -1,0 +1,11 @@
+<md-card ng-repeat="msg in vm.messages">
+    <md-card-title>
+        <md-card-title-text>
+                <span class="md-headline">{{msg.mobile}}</span>
+            <span class="md-subhead">{{msg.time.$date | date:'MM/dd/yyyy @ h:mma'}}</span>
+        </md-card-title-text>
+    </md-card-title>
+    <md-card-content layout-align="space-between">
+        <md-content>{{msg.message}}</md-content>
+    </md-card-content>
+</md-card>
